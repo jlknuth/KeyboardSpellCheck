@@ -17,8 +17,8 @@ Installation
   For windows there is an executable installer. I have no information on Linux installation at this time. 
 
 
- Credits
- -------
+Credits
+-------
  Credit for the keyboard triggered code goes to Alex Naspo. Much of this work is almost an exact copy of what he has done. 
  https://github.com/alexnaspo/sublime-spell-check/
 
