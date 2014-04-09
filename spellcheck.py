@@ -11,8 +11,6 @@ import re
 
 class SpellCheckCommand(sublime_plugin.TextCommand):
     def __init__(self, view):
-        # self.view = view
-        # self.selection = view.sel()
         sublime_plugin.TextCommand.__init__(self, view)
         self.dictionary = enchant.Dict("en_US")
 
