@@ -1,0 +1,11 @@
+[  
+    { "keys": ["control+alt+k"], "command": "spell_check" },
+
+    { "keys": ["z", "="], "command": "spell_check",
+    	"context": 
+	    [
+			{ "key": "setting.command_mode", "operand": true},
+			{ "key": "setting.is_widget", "operand": false }
+	    ]
+    },
+]   

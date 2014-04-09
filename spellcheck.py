@@ -4,7 +4,9 @@ import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), "pyenchant"))
 import enchant
-import urllib.request, urllib.parse, re
+import urllib.request
+import urllib.parse
+import re
 
 
 class SpellCheckCommand(sublime_plugin.TextCommand):
@@ -15,6 +17,7 @@ class SpellCheckCommand(sublime_plugin.TextCommand):
         self.dictionary = enchant.Dict("en_US")
 
     def run(self, edit):
+        s = sublime.load_settings("KeyboardSpellCheck.sublime-settings")
         self.selection = self.view.sel()
         self.pos = self.view.sel()[0]
 
@@ -24,7 +27,11 @@ class SpellCheckCommand(sublime_plugin.TextCommand):
             return  # nothing selected
 
         self.suggestions = self.dictionary.suggest(phrase)
-        gfix = self.correct(phrase)
+
+        if s.get("use_google", True):
+            gfix = self.correct(phrase)
+        else:
+            gfix = None
 
         if gfix is not None:
             if gfix in self.suggestions:
