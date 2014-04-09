@@ -19,7 +19,9 @@ class SpellCheckCommand(sublime_plugin.TextCommand):
         self.selection = self.view.sel()
         self.pos = self.view.sel()[0]
 
-        self.view.run_command("expand_selection", {"to": "word"})
+        if self.view.sel()[0].a == self.view.sel()[0].b:
+            self.view.run_command("expand_selection", {"to": "word"})
+
         phrase = self.view.substr(self.selection[0])
         if not phrase:
             return  # nothing selected
