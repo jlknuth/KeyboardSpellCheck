@@ -1,5 +1,5 @@
 KeybardSpellCheck
-================
+=================
 
 A Sublime Text 3 plugin that allows you to spell check the word under the cursor from the keyboard (vi style). Press ```control+alt+k``` or ```z=``` 
 in command mode to display spelling suggestions. 
