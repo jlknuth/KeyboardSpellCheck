@@ -13,7 +13,7 @@ Installation
   + From Source - Clone the repo to your Sublime Text packages folder.
 
   This package requires the enchant spell checking package. On Mac this can be installed using ```brew install enchant```. 
-  For windows there is an executable installer. I have no information on Linux installation at this time. 
+  For windows there is an executable installer. Most distributions of Linux come with enchant installed by default. 
 
 
 Credits
