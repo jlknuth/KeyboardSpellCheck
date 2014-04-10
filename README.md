@@ -9,7 +9,7 @@ If the ```use_google``` setting is set to true, Google's best guess for what you
 Installation
 ------------
 
-  + Package Control - First install from https://sublime.wbond.net/installation then search for the KeybardSpellCheck package. 
+  + Package Control - First install Package Control from https://sublime.wbond.net/installation then search for the KeybardSpellCheck package. 
   + From Source - Clone the repo to your Sublime Text packages folder.
 
   This package requires the enchant spell checking package. On Mac this can be installed using ```brew install enchant```. 
