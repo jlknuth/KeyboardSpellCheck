@@ -7,5 +7,19 @@
 			{ "key": "setting.command_mode", "operand": true},
 			{ "key": "setting.is_widget", "operand": false }
 	    ]
-    },
+    },	
+    { "keys": ["]", "s"], "command": "next_misspelling",
+		"context":
+		[
+			{ "key": "setting.command_mode", "operand": true},
+			{ "key": "setting.is_widget", "operand": false }
+		]
+	},
+	{ "keys": ["[", "s"], "command": "prev_misspelling",
+		"context":
+		[
+			{ "key": "setting.command_mode", "operand": true},
+			{ "key": "setting.is_widget", "operand": false }
+		]
+	},	
 ]   
