@@ -31,6 +31,11 @@ class SpellCheckCommand(sublime_plugin.TextCommand):
         self.selection = self.view.sel()
         self.pos = self.view.sel()[0]
 
+        if s.get("mark_google", True):
+            gstr = '   -Google-'
+        else:
+            gstr = ''
+
         if self.view.sel()[0].a == self.view.sel()[0].b:
             self.view.run_command("expand_selection", {"to": "word"})
 
@@ -48,11 +53,11 @@ class SpellCheckCommand(sublime_plugin.TextCommand):
         if gfix is not None:
             if gfix in self.suggestions:
                 self.suggestions.remove(gfix)
-            self.index_suggestions = ['{0}: '.format(ix+1)+s for ix, s in enumerate(self.suggestions)]
+            self.index_suggestions = ['{0}: '.format(ix+2)+s for ix, s in enumerate(self.suggestions)]
             self.suggestions = [gfix] + self.suggestions
-            self.index_suggestions = ['{0}[G]: '.format(0)+gfix] + self.index_suggestions
+            self.index_suggestions = ['{0}: '.format(1)+gfix+gstr] + self.index_suggestions
         else:
-            self.index_suggestions = ['{0}: '.format(ix)+s for ix, s in enumerate(self.suggestions)]
+            self.index_suggestions = ['{0}: '.format(ix+1)+s for ix, s in enumerate(self.suggestions)]
 
         if (not self.dictionary.check(phrase)) or (gfix is not None):
             self.view.window().show_quick_panel(self.index_suggestions,
