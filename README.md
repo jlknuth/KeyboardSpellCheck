@@ -1,10 +1,19 @@
 KeybardSpellCheck
 =================
 
-A Sublime Text 2/3 plugin that allows you to spell check the word under the cursor from the keyboard (vi style). Press ```control+alt+k``` or ```z=``` in command mode to display spelling suggestions. Use ```[s``` and ```]s``` to step through spelling errors in command mode. 
-
+A Sublime Text 2/3 plugin that allows you to spell check the word under the cursor from the keyboard (vi style). 
 If the ```use_google``` setting is set to true, Google's best guess for what you meant will also be displayed as the first option.
 
+This package is designed to work in conjunction with Sublime's built in spell check. Thus to utilize this package to its fullest, ```"spell_check": true``` should be in your ```Preferences.sublime-settings``` file.
+
+
+Usage 
+-----
+Press ```control+alt+k``` (or ```z=``` in command mode) to display spelling suggestions. 
+Use ```control+alt+[``` or ```control+alt+]```  (or ```[s``` and ```]s``` in command mode) to step through spelling errors.
+
+When selecting a replacement from the spelling suggestions, fuzzy search is being utilized, so typing the number or some part of the word will select 
+the corresponding replacement. 
 
 Installation
 ------------

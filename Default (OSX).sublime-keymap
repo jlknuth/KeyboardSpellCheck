@@ -1,6 +1,7 @@
 [  
     { "keys": ["control+alt+k"], "command": "spell_check" },
-
+    { "keys": ["control+alt+]"], "command": "next_misspelling"},
+	{ "keys": ["control+alt+["], "command": "prev_misspelling"},
     { "keys": ["z", "="], "command": "spell_check",
     	"context": 
 	    [
