@@ -10,9 +10,9 @@ This package is designed to work in conjunction with Sublime's built in spell ch
 Usage 
 -----
 Press ```control+alt+k``` (or ```z=``` in command mode) to display spelling suggestions. 
-Use ```control+alt+[``` or ```control+alt+]```  (or ```[s``` and ```]s``` in command mode) to step through spelling errors.
+Use ```control+alt+[``` and ```control+alt+]```  (or ```[s``` and ```]s``` in command mode) to step through spelling errors.
 
-When selecting a replacement from the spelling suggestions, fuzzy search is being utilized, so typing the number or some part of the word will select 
+When selecting a replacement word from the spelling suggestions fuzzy search is being utilized, so typing the number or some part of the word will select 
 the corresponding replacement. 
 
 Installation
