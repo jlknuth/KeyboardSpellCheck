@@ -87,7 +87,7 @@ class SpellCheckCommand(sublime_plugin.TextCommand):
             return None
 
         # pull pieces out
-        match = re.search(r'(?:Showing results for|Did you mean|Including results for)[^\0]*?<a.*?>(.*?)</a>', html)
+        match = re.search(r'(?:Showing results for</span>|Did you mean:</span>)[^\0]*?<a.*?>(.*?)</a>', html)
         if match is None:
             fix = None
         else:
